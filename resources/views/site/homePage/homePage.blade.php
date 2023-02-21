@@ -31,6 +31,12 @@
                                     </li>
                                     @auth()
                                         <li><a href="/home" >فرزانه ملکی خوش آمدید</a></li>
+                                        <li>
+                                        <form method="post" action="{{route('logout')}}">
+                                            @csrf
+                                            <button type="submit">خروج</button>
+                                        </form>
+                                        </li>
                                         @else()
                                     <li><a href="#signin-modal" data-toggle="modal">ورود / ثبت نام</a></li>
                                         @endauth
